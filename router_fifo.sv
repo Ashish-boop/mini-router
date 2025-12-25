@@ -1,4 +1,4 @@
-`timescale 1ps / 1ps
+`timescale 1ns / 1ps
 
 module router_fifo #(
     parameter WIDTH = 9,
@@ -115,3 +115,4 @@ module router_fifo #(
   end
 
 endmodule
+
