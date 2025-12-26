@@ -95,7 +95,7 @@ module router_reg #(
         int_parity_byte <= 8'd0;
       end else if (lfd_state) begin
         int_parity_byte <= int_parity_byte ^ header_byte;  //internal parity calculation 
-      end else if (ld_state && !fifo_full && pkt_valid) begin
+      end else if (ld_state && !full_state && pkt_valid) begin
         int_parity_byte <= int_parity_byte ^ data_in;
       end
     end
